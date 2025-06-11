@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="DoraLetterView">
+        <attr format="string|reference" name="dview_lv_letters"/>
+        <attr format="dimension|reference" name="dview_lv_textSize"/>
+        <attr format="color|reference" name="dview_lv_textColor"/>
+        <attr format="color|reference" name="dview_lv_hoverTextColor"/>
+        <attr format="reference" name="dview_lv_hoverBackgroundDrawable"/>
+        <attr format="boolean" name="dview_lv_textAllCaps"/>
+    </declare-styleable>
+    <declare-styleable name="DoraSideBar">
+        <attr name="dview_sb_indicatorBgColor" format="color|reference" />
+        <attr name="dview_sb_indicatorItemWidth" format="dimension|reference" />
+        <attr name="dview_sb_indicatorItemHeight" format="dimension|reference" />
+        <attr name="dview_sb_indicatorTextSize" format="dimension|reference" />
+        <attr name="dview_sb_indicatorSelectedTextColor" format="color|reference" />
+        <attr name="dview_sb_indicatorSelectedBgColor" format="color|reference" />
+        <attr name="dview_sb_indicatorSelectedBgRadius" format="dimension|reference" />
+        <attr name="dview_sb_indicatorUnselectedTextColor" format="color|reference" />
+        <attr name="dview_sb_indicatorBubbleTextSize" format="dimension|reference" />
+        <attr name="dview_sb_indicatorBubbleTextColor" format="color|reference" />
+        <attr name="dview_sb_indicatorBubbleBgColor" format="color|reference" />
+        <attr name="dview_sb_indicatorBubbleBgRadius" format="dimension|reference" />
+        <attr name="dview_sb_indicatorBubbleMargin" format="dimension|reference" />
+        <attr name="dview_sb_indicatorBubbleDrawable" format="reference" />
+    </declare-styleable>
+</resources>
