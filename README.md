@@ -2,6 +2,9 @@ dview-sidebar
 ![Release](https://jitpack.io/v/dora4/dview-sidebar.svg)
 --------------------------------
 
+#### 卡片
+![DORA视图 符文图腾](https://github.com/user-attachments/assets/92a76cc3-1e92-4576-9652-ca6c26c283e1)
+
 #### Gradle依赖配置
 
 ```groovy
