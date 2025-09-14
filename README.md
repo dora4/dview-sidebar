@@ -17,6 +17,6 @@ allprojects {
 // 添加以下代码到app模块的build.gradle
 dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
-    implementation 'com.github.dora4:dview-sidebar:1.2'
+    implementation 'com.github.dora4:dview-sidebar:1.3'
 }
 ```
