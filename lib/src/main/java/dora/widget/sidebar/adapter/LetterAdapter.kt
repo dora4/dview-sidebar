@@ -1,14 +1,19 @@
 package dora.widget.sidebar.adapter
 
 import android.content.Context
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.RecyclerView
 import dora.widget.sidebar.R
 
-class LetterAdapter @JvmOverloads constructor(private val context: Context, private var indicators: MutableList<String> = arrayListOf()) :
+class LetterAdapter @JvmOverloads constructor(private val context: Context,
+                                              private val textSize: Float,
+                                              @ColorInt private val textColor: Int,
+                                              private var indicators: MutableList<String> = arrayListOf()) :
     RecyclerView.Adapter<LetterAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -16,8 +21,10 @@ class LetterAdapter @JvmOverloads constructor(private val context: Context, priv
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val tv_side_bar = holder.itemView.findViewById<TextView>(R.id.tv_side_bar)
-        tv_side_bar.text = indicators[position]
+        val tvSideBar = holder.itemView.findViewById<TextView>(R.id.tv_side_bar)
+        tvSideBar.text = indicators[position]
+        tvSideBar.setTextSize(TypedValue.COMPLEX_UNIT_DIP, textSize)
+        tvSideBar.setTextColor(textColor)
     }
 
     fun addData(indicator: String) {

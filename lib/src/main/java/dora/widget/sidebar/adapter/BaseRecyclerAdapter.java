@@ -1,5 +1,6 @@
 package dora.widget.sidebar.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -172,7 +173,7 @@ public abstract class BaseRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
     protected abstract VH createItemViewHolder(View view, int viewType);
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         if (getItemViewType(position) == ITEM_TYPE) {
             int index = position - headers.size();
             final T obj = dataSource.get(index);

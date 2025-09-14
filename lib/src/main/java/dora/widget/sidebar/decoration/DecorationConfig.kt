@@ -1,5 +1,8 @@
 package dora.widget.sidebar.decoration
 
+import android.graphics.Color
+import androidx.annotation.ColorInt
+
 class DecorationConfig {
     var lineHeight = 0
         private set
@@ -37,10 +40,40 @@ class DecorationConfig {
         private set
 
     class Builder {
-        private val config: DecorationConfig
+
+        private val config: DecorationConfig = DecorationConfig()
+
         fun setLine(height: Int, color: Int): Builder {
             config.lineHeight = height
             config.lineColor = color
+            return this
+        }
+
+        fun setSelectedBgColor(@ColorInt color: Int): Builder {
+            config.selectedBgColorR = Color.red(color)
+            config.selectedBgColorG = Color.green(color)
+            config.selectedBgColorB = Color.blue(color)
+            return this
+        }
+
+        fun setUnSelectBgColor(@ColorInt color: Int): Builder {
+            config.unSelectBgColorR = Color.red(color)
+            config.unSelectBgColorG = Color.green(color)
+            config.unSelectBgColorB = Color.blue(color)
+            return this
+        }
+
+        fun setSelectedTextColor(@ColorInt color: Int): Builder {
+            config.selectedTextColorR = Color.red(color)
+            config.selectedTextColorG = Color.green(color)
+            config.selectedTextColorB = Color.blue(color)
+            return this
+        }
+
+        fun setUnSelectTextColor(@ColorInt color: Int): Builder {
+            config.unSelectTextColorR = Color.red(color)
+            config.unSelectTextColorG = Color.green(color)
+            config.unSelectTextColorB = Color.blue(color)
             return this
         }
 
@@ -89,10 +122,6 @@ class DecorationConfig {
 
         fun build(): DecorationConfig {
             return config
-        }
-
-        init {
-            config = DecorationConfig()
         }
     }
 }
